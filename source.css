@@ -76,6 +76,12 @@ input.text.ts_input, .input_back {
     display: none;
 }
 
+/* ^ Меню сбоку (Убираем линии - Показ некоторых линий) */
+#side_bar_inner ol > div:nth-child(12), #side_bar_inner ol > div:nth-child(18) {
+    display: block;
+    margin-left: 0 !important;
+}
+
 /* Фикс меню под навигацией (Центрирование) */
 .left_menu_nav_wrap {
     border-top: none;
@@ -205,6 +211,11 @@ input.text.ts_input, .input_back {
 /* Скрытие кнопки Facebook при входе */
 #index_fbcontinuewithsign {
     height: 0 !important;
+}
+
+/* Скрытие надписи Powered by NGINX */
+.side_bar_inner div:nth-child(3) {
+    display: none !important;
 }
 
 /* Редизайн навигации */
