@@ -5,6 +5,11 @@ body > *, span, button, input {
     letter-spacing: 0.3px;
 }
 
+/* Отступ снизу от блоков */
+body {
+    padding-bottom: 20px;
+}
+
 /* ----- Шапка ----- */
 
 /* Скрытие аватар справа */
