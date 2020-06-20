@@ -40,7 +40,11 @@ input.text.ts_input, .input_back {
 /* ----- Основная часть сайта ----- */
 
 /* Заглавные первые буквы в блоках (Друзья, информация о профиле и онлайн статус) */
-#profile_short .profile_info_row .labeled a:first-letter, .header_right_link:first-letter, .profile_time_lv:first-letter {
+#profile_short .profile_info_row .labeled a:first-letter, .header_right_link:first-letter, .profile_online_lv:first-letter {
+    text-transform: uppercase;
+}
+
+.profile_info .labeled:first-letter {
     text-transform: uppercase;
 }
 
@@ -72,8 +76,14 @@ input.text.ts_input, .input_back {
 }
 
 /* Меню сбоку (Убираем линии) */
-#side_bar_inner .more_div {
+#side_bar_inner div.more_div {
     display: none;
+}
+
+/* Показываем только нужныелинии */
+#side_bar_inner ol > div:nth-child(12), #side_bar_inner ol > div:nth-child(18) {
+    display: block;
+    margin-left: 0 !important;
 }
 
 /* ^ Меню сбоку (Убираем линии - Показ некоторых линий) */
@@ -157,7 +167,7 @@ input.text.ts_input, .input_back {
 }
 
 /* ^ Скрытие рекламы */
-#ads_left, .ads_ad_box_border, #ads_left.ads_left_empty {
+#ads_left, .ads_ad_box_border, #ads_left.ads_left_empty, #lovina_ads_row {
     display: none !important;
     height: 0 !important;
     position: absolute !important;
@@ -213,10 +223,11 @@ input.text.ts_input, .input_back {
     height: 0 !important;
 }
 
-/* Скрытие надписи Powered by NGINX */
-.side_bar_inner div:nth-child(3) {
+/* Скрытие всего про COVID-19 */
+.CovidLogo__hashtag, .CovidTooltip, .CovidStatus__wrapper, ._im_dialog_link .emoji, .im-page--corona-bot-link, .im-page--title-main-in .emoji, .im-mess-stack--pname .emoji {
     display: none !important;
 }
+
 
 /* Редизайн навигации */
 /*
@@ -267,5 +278,24 @@ input.text.ts_input, .input_back {
 
 .more_div.l_main {
      display: none !important;
+}
+*/
+
+/* Новое лого */
+/*
+.top_home_logo {
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1LjY4IDBDMjIuNCAwIDI0IDEuNiAyNCA4LjMydjcuMzZDMjQgMjIuNCAyMi40IDI0IDE1LjY4IDI0SDguMzJDMS42IDI0IDAgMjIuNCAwIDE1LjY4VjguMzJDMCAxLjYgMS42IDAgOC4zMiAwek02LjUgNy41SDQuNzVjLS41IDAtLjYuMjQtLjYuNDkgMCAuNDcuNTkgMi43NyAyLjc2IDUuODFhNi44NSA2Ljg1IDAgMDA1LjM0IDMuMmMxLjExIDAgMS4yNS0uMjUgMS4yNS0uNjh2LTEuNTdjMC0uNS4xMS0uNi40Ni0uNnMuNy4xMyAxLjc0IDEuMTNjMS4xOSAxLjE5IDEuMzggMS43MiAyLjA1IDEuNzJoMS43NWMuNSAwIC43NS0uMjUuNjEtLjc0YTcuNDMgNy40MyAwIDAwLTEuNDgtMi4wNWMtLjQxLS40OS0xLTEtMS4yMS0xLjI2cy0uMTgtLjQ5IDAtLjc4YTIxLjgzIDIxLjgzIDAgMDAyLjM2LTRjLjExLS4zNyAwLS42NC0uNTMtLjY0SDE3LjVhLjc3Ljc3IDAgMDAtLjc2LjQ5IDE0LjY3IDE0LjY3IDAgMDEtMi4xNSAzLjU4Yy0uNDEuNDEtLjYuNTQtLjgyLjU0cy0uMjctLjEzLS4yNy0uNXYtMy41YzAtLjQ0LS4xMy0uNjQtLjUtLjY0aC0yLjc1YS40My40MyAwIDAwLS40NS40YzAgLjQyLjY0LjUyLjcgMS43MXYyLjU3YzAgLjU3LS4xLjY3LS4zMi42Ny0uNiAwLTItMi4xOC0yLjktNC42N0M3LjEyIDcuNyA3IDcuNSA2LjUgNy41eiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+") no-repeat 50%/contain !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 10px 0 0 !important;
+}
+
+.top_home_logo:before {
+    content: "ВКонтакте";
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    margin-left: 34px;
+    line-height: 24px;
 }
 */
