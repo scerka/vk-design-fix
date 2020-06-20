@@ -44,10 +44,6 @@ input.text.ts_input, .input_back {
     text-transform: uppercase;
 }
 
-.profile_info .labeled:first-letter {
-    text-transform: uppercase;
-}
-
 /* ^ Фиск ссылок в информация о профиле (Маленькая первая заглавная буква) */
 #profile_short .profile_info_row .labeled a[href^="/away.php"]:first-letter {
     text-transform: lowercase;
