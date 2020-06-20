@@ -71,12 +71,7 @@ input.text.ts_input, .input_back {
     position: relative;
 }
 
-/* Меню сбоку (Убираем линии) */
-#side_bar_inner div.more_div {
-    display: none;
-}
-
-/* Показываем только нужныелинии */
+/* Показываем только нужные линии */
 #side_bar_inner ol > div:nth-child(12), #side_bar_inner ol > div:nth-child(18) {
     display: block;
     margin-left: 0 !important;
