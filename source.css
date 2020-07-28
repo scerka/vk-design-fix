@@ -92,7 +92,7 @@ input.text.ts_input, .input_back {
 .left_menu_nav_wrap {
     border-top: none;
     width: 149px;
-    text-align: center;
+    text-align: center !important;
 }
 
 /* ^ Фикс меню под навигацией (Внутренний отступ справа для 2ой ссылки) */
@@ -101,7 +101,7 @@ input.text.ts_input, .input_back {
 }
 
 .left_menu_nav_wrap {
-    padding-top: 0;
+    padding-top: 0 !important;
 }
 
 .left_menu_more {
