@@ -182,7 +182,7 @@ input.text.ts_input, .input_back {
 }
 
 /* Скрытие ненужных полей меню в разных частях сайта */
-#ui_rmenu_recommended, #ui_rmenu_search, #ui_rmenu_find, #ui_rmenu_events, #ui_rmenu_category0, .audio_subscribe_promo, .fb-login-button, #top_switch_lang {
+.audio_subscribe_promo, .fb-login-button, #top_switch_lang {
     display: none;
 }
 
@@ -222,12 +222,6 @@ input.text.ts_input, .input_back {
 #index_fbcontinuewithsign {
     height: 0 !important;
 }
-
-/* Скрытие всего про COVID-19 */
-.CovidLogo__hashtag, .CovidTooltip, .CovidStatus__wrapper, ._im_dialog_link .emoji, .im-page--corona-bot-link, .im-page--title-main-in .emoji, .im-mess-stack--pname .emoji {
-    display: none !important;
-}
-
 
 /* Редизайн навигации */
 /*
