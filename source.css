@@ -1,137 +1,51 @@
 /* ----- Глобальные стили ----- */
 
 /* Расстояние между буквами */
-body > *, span, button, input {
-    letter-spacing: 0.3px;
+body > *, span, button, input, textarea {
+    letter-spacing: 0.3px !important;
 }
 
 /* Отступ снизу от блоков */
 body {
-    padding-bottom: 20px !important;
+    margin-bottom: 20px !important;
 }
 
 /* ----- Шапка ----- */
 
 /* Скрытие аватар справа */
 .top_profile_img {
-    display: none;
+    display: none !important;
 }
 
 /* ^ Фикс расстояния от имени до стрелки вниз */
 .top_profile_name {
-    padding-right: 0;
-}
-
-/* Скрытие непонятной кнопки рядом с кнопкой музыки */
-.top_audio_play {
-    display: none;
+    padding-right: 0 !important;
 }
 
 /* Фикс поля поиска */
-
-/* 110% */
-input.text.ts_input, .input_back {
-    padding:8px 6px 6px 19px !important;
-    background-position-y: 7px;
+.input_back {
+    padding: 0 !important;
+    padding-left: 19px !important;
 }
 
-/* 100% */
-/*
-input.text.ts_input, .input_back {
-    padding:7px 6px 6px 19px !important;
+.input_back_content {
+    line-height: 29px !important;
 }
-*/
+
+[dir=ltr] input.text.ts_input {
+    background-position: left 7px !important;
+}
 
 /* ----- Основная часть сайта ----- */
 
-/* Заглавные первые буквы в блоках (Друзья, информация о профиле и онлайн статус) */
-#profile_short .profile_info_row .labeled a:first-letter, .header_right_link:first-letter, .profile_online_lv:first-letter {
-    text-transform: uppercase;
-}
-
-/* ^ Фиск ссылок в информация о профиле (Маленькая первая заглавная буква) */
-#profile_short .profile_info_row .labeled a[href^="/away.php"]:first-letter {
-    text-transform: lowercase;
-}
-
-/* ^ Фиск ссылок в информация о профиле (Ссылки как блок) */
-#profile_short .profile_info_row .labeled a {
-    display: inline-block;
-}
-
 /* Жирный шрифт в ФИО */
 .page_name {
-    font-weight: 700 !important;
+    font-weight: bold !important;
 }
 
-/* Фикс иконки телефона в онлайн статусе */
-/* 110% */
-.mob_onl {
-    background-position-y: 4px;
-}
-
-/* Меню сбоку (Фикс) */
-#side_bar {
-    top: 0 !important;
-    position: relative;
-}
-
-/* Показываем только нужные линии */
-#side_bar_inner ol > div:nth-child(12), #side_bar_inner ol > div:nth-child(18) {
-    display: block;
-    margin-left: 0 !important;
-}
-
-/* ^ Меню сбоку (Убираем линии - Показ некоторых линий) */
-#side_bar_inner ol > div:nth-child(12), #side_bar_inner ol > div:nth-child(18) {
-    display: block;
-    margin-left: 0 !important;
-}
-
-/* Фикс меню под навигацией (Центрирование) */
-.left_menu_nav_wrap {
-    border-top: none;
-    width: 149px;
-    text-align: center !important;
-}
-
-/* ^ Фикс меню под навигацией (Внутренний отступ справа для 2ой ссылки) */
-.left_menu_nav_wrap a:nth-child(2) {
-    padding-right: 0;
-}
-
-[dir] #side_bar ol {
-    margin: 0 0 5px !important;;
-}
-
-.left_menu_nav_wrap {
-    padding-top: 0 !important;
-}
-
-.left_menu_more {
-    display: block;
-    padding-right: 10px;
-}
-
-.ui_actions_menu {
-    text-align: left;
-}
-
-.blog_right_menu_nav {
-    margin-top: 10px;
-}
-
-.blog_right_menu .left_menu_nav_wrap{
-    margin:0 16px;
-    width: auto;
-}
-
-.blog_right_menu .left_menu_nav_wrap a:nth-child(3) {
-    padding-right: 0;
-}
-
-.blog_right_menu .left_menu_nav_wrap a:nth-child(2) {
-    padding-right: 10px;
+/* Заглавные первые буквы в блоках (Друзья, онлайн статус) */
+.header_right_link:first-letter, .profile_online_lv:first-letter {
+    text-transform:  uppercase  !important;
 }
 
 /* Фикс ширини блока "Наверх" */
@@ -139,66 +53,72 @@ input.text.ts_input, .input_back {
     width: 0 !important;
 }
 
+/* ^ Фикс ширини блока "Наверх" */
 #stl_side {
+    display: none !important;
+}
+
+/* Фикс меню под навигацией (Центрирование) */
+.left_menu_nav_wrap {
+    border-top: none  !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
+[dir] #side_bar ol {
+    margin-bottom: 5px !important;
+}
+
+[dir=ltr] .left_menu_nav {
+    padding: 0 5px  !important;
+}
+
+.ui_actions_menu {
+    text-align: left !important;
+}
+
+.more_div {
     display: none !important;
 }
 
 /* ----- Дополнительные функции ----- */
 
-/* Неподвижные блоки */
-.narrow_column {
-    position: static;
-    margin-top: 0 !important;
+/* Скрытие рекламы */
+#ads_left {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0);
+    overflow: hidden !important;
 }
 
 /* Скрытие мини чата справа снизу */
-.chat_onl_wrap {
+#chat_onl_wrap {
     display: none !important;
 }
 
-/* Скрытие комментариев */
-.replies, .like_btn.comment, .wl_replies_block_wrap, .share, .post_replies_header  {
-    display: none;
+/* Неподвижные блоки */
+.narrow_column {
+    position: static  !important;
+    margin-top: 0 !important;
 }
 
-/* Скрытие рекомендаций */
-#groups_filters_wrap, #feed_filters div.page_block:nth-child(2), #friends_possible_block, .feed_friends_recomm {
-    display: none !important;
-}
-
-/* ^ Скрытие рекламы */
-#ads_left, .ads_ad_box_border, #ads_left.ads_left_empty, #lovina_ads_row {
-    display: none !important;
-    height: 0 !important;
-    position: absolute !important;
+/* ^ Неподвижные блоки (фикс бокового меню) */
+#side_bar {
     top: 0 !important;
-    left: -1000px !important;
-}
-
-/* ^ Скрытие рекламы (Фикс нижнего блока) */
-#ads_left.ads_left_empty+.left_menu_nav_wrap {
-    padding-top: 0 !important;
-    border-top: 0 !important;
-}
-
-/* Скрытие ненужных полей меню в разных частях сайта */
-.audio_subscribe_promo, .fb-login-button, #top_switch_lang {
-    display: none;
-}
-
-/* ^ Скрытие ненужных полей меню в разных частях сайта */
-#narrow_column > div.page_block.ui_rmenu.ui_rmenu_pr._ui_rmenu_auto_expand:first-child > div.ui_rmenu_sep:nth-child(4) {
-     display: none;
-}
-
-/* Скрытие списка групп в подробной информации */
-#profile_full > div.profile_info_block.clear_fix:last-child > div.profile_info:last-child > div.clear_fix.profile_info_row:last-child {
-    display: none;
+    position: relative !important;
 }
 
 /* VK Pay переименование в левом меню (Размер текста 0) */
 #side_bar_inner a[href^="/vkpay"] .left_label {
-    font-size: 0;
+    font-size: 0 !important;
 }
 
 /* ^ VK Pay переименование в левом меню (Переименование в кошелек) */
@@ -209,7 +129,7 @@ input.text.ts_input, .input_back {
 
 /* VK Pay переименование в левом меню > Настройки (Размер текста 0) */
 .olist_item_no_vkpay .olist_item_name {
-    font-size: 0;
+    font-size: 0 !important;
 }
 
 /* ^ VK Pay переименование в левом меню > Настройки (Переименование в кошелек) */
@@ -218,65 +138,22 @@ input.text.ts_input, .input_back {
     font-size: 13px;
 }
 
-/* Скрытие кнопки Facebook при входе */
-#index_fbcontinuewithsign {
-    height: 0 !important;
+/* Скрытие списка групп в подробной информации */
+#profile_full > div.profile_info_block.clear_fix:last-child > div.profile_info:last-child > div.clear_fix.profile_info_row:last-child {
+    display: none !important;
 }
 
-/* Редизайн навигации */
-/*
-#side_bar_inner {
-    background:#fff;
-    border-radius: 2px;
-    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
-    margin-top: 57px;
+/* Скрытие комментариев */
+.comment, .post_replies_header, .replies {
+    display: none !important;
 }
 
-#side_bar .left_fixer {
-    padding:0 15px 0 20px;
+/* Скрытие рекомендаций (друзья, сообщества) */
+#friends_possible_block, #groups_recommendations {
+    display: none !important;
 }
-
-#side_bar .left_icon {
-    display: none;
-}
-
-#side_bar ol li {
-    margin-left: 0;
-}
-
-#side_bar .more_div {
-    margin-left: 0;
-    margin-right: 0;
-    border-top: 1px solid #e7e8ec;
-}
-
-#side_bar ol {
-    margin: 0;
-}
-
-#side_bar ol li .left_row:hover {
-    background:#f0f2f5;
-}
-.left_menu_nav_wrap {
-    position: absolute;
-    border-top: none;
-    margin: 0 8px;
-    width: 133px;
-    text-align: center;
-}
-#side_bar .more_div {
-    margin-left: 0;
-    margin-right: 0;
-    border-top: 1px solid #e7e8ec;
-}
-
-.more_div.l_main {
-     display: none !important;
-}
-*/
 
 /* Новое лого */
-/*
 .top_home_logo {
     background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE1LjY4IDBDMjIuNCAwIDI0IDEuNiAyNCA4LjMydjcuMzZDMjQgMjIuNCAyMi40IDI0IDE1LjY4IDI0SDguMzJDMS42IDI0IDAgMjIuNCAwIDE1LjY4VjguMzJDMCAxLjYgMS42IDAgOC4zMiAwek02LjUgNy41SDQuNzVjLS41IDAtLjYuMjQtLjYuNDkgMCAuNDcuNTkgMi43NyAyLjc2IDUuODFhNi44NSA2Ljg1IDAgMDA1LjM0IDMuMmMxLjExIDAgMS4yNS0uMjUgMS4yNS0uNjh2LTEuNTdjMC0uNS4xMS0uNi40Ni0uNnMuNy4xMyAxLjc0IDEuMTNjMS4xOSAxLjE5IDEuMzggMS43MiAyLjA1IDEuNzJoMS43NWMuNSAwIC43NS0uMjUuNjEtLjc0YTcuNDMgNy40MyAwIDAwLTEuNDgtMi4wNWMtLjQxLS40OS0xLTEtMS4yMS0xLjI2cy0uMTgtLjQ5IDAtLjc4YTIxLjgzIDIxLjgzIDAgMDAyLjM2LTRjLjExLS4zNyAwLS42NC0uNTMtLjY0SDE3LjVhLjc3Ljc3IDAgMDAtLjc2LjQ5IDE0LjY3IDE0LjY3IDAgMDEtMi4xNSAzLjU4Yy0uNDEuNDEtLjYuNTQtLjgyLjU0cy0uMjctLjEzLS4yNy0uNXYtMy41YzAtLjQ0LS4xMy0uNjQtLjUtLjY0aC0yLjc1YS40My40MyAwIDAwLS40NS40YzAgLjQyLjY0LjUyLjcgMS43MXYyLjU3YzAgLjU3LS4xLjY3LS4zMi42Ny0uNiAwLTItMi4xOC0yLjktNC42N0M3LjEyIDcuNyA3IDcuNSA2LjUgNy41eiIgZmlsbD0iI2ZmZiIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+") no-repeat 50%/contain !important;
     width: 24px !important;
@@ -287,13 +164,53 @@ input.text.ts_input, .input_back {
 .top_home_logo:before {
     content: "ВКонтакте";
     font-size: 14px;
-    font-weight: 500;
+    font-weight: bold;
     color: #fff;
-    margin-left: 31px;
+    margin-left: 30px;
     line-height: 25px;
 }
 
 .top_home_link:hover {
-    text-decoration: none;
+    text-decoration: none !important;
 }
-*/
+
+/* Редизайн навигации */
+#side_bar_inner > nav {
+    background: #fff !important;
+    border-radius: 2px !important;
+    padding: 10px 0 !important;
+    box-shadow: 0 1px 0 0 var(--steel_gray_120),0 0 0 1px var(--steel_gray_80) !important;
+    margin-bottom: 5px !important;
+}
+
+[dir] #side_bar ol {
+    margin-bottom: 0 !important;
+}
+
+#side_bar_inner > nav > ol > li {
+    margin-left: 0 !important;
+}
+
+[dir] #side_bar ol li .left_row {
+    padding: 0 10px 0 15px !important;
+}
+
+[dir] #side_bar ol li .left_row:hover {
+    border-radius: 0 !important;
+    background-color: var(--steel_gray_40) !important;
+}
+
+#side_bar .left_icon {
+    display: none !important;
+}
+
+[dir] #side_bar .more_div {
+    margin: 5px 0  !important;
+    padding: 0 !important;
+    display: block !important;
+    border-top: 1px solid var(--steel_gray_80) !important;
+}
+
+#side_bar_inner > nav > ol > div.more_div.l_main {
+    display: none !important;
+}

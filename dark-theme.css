@@ -1,0 +1,32 @@
+/* ----- Темная тема ----- */
+
+:root {
+    --steel_gray_60: #181818;
+    --blue_420: #232323;
+    --white: #232323;
+    --black: #fff;
+    --blue_600: #fff;
+    --button-secondary-text-color: #fff;
+    --button-text-color: #fff;
+    --steel_gray_10: #ffffff1a;
+    --steel_gray_40: #ffffff1a;
+    --steel_gray_80: #ffffff1a;
+    --steel_gray_100: #ffffff1a;
+    --steel_gray_120: #ffffff1a;
+    --steel_gray_140: #ffffff1a;
+    --light_blue_100: #ffffff1a;
+    --light_blue_40: #ffffff1a;
+    --link-color: #aaa;
+}
+
+.top_audio_player_title {
+    color: #fff !important;
+}
+
+[dir] .top_nav_link {
+    color: #fff !important;
+}
+
+[dir] .top_nav_link.active {
+    background-color: #ffffff1a !important;
+}
