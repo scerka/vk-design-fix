@@ -84,7 +84,7 @@ body {
 /* ----- Дополнительные функции ----- */
 
 /* Скрытие рекламы */
-#ads_left {
+#ads_left, ._ads_block_data_w, .own_ads_promoted_post {
     display: none !important;
     visibility: hidden !important;
     position: absolute !important;
