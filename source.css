@@ -1,25 +1,58 @@
 /* ----- Глобальные стили ----- */
 
 /* Расстояние между буквами */
-body > *, span, button, input, textarea {
+* {
     letter-spacing: 0.3px !important;
 }
 
 /* Отступ снизу от блоков */
 body {
-    margin-bottom: 20px !important;
+    margin-bottom: 10px !important;
 }
 
 /* ----- Шапка ----- */
 
 /* Скрытие аватар справа */
-.top_profile_img {
+.TopNavBtn__profileImg {
     display: none !important;
 }
 
-/* ^ Фикс расстояния от имени до стрелки вниз */
-.top_profile_name {
-    padding-right: 0 !important;
+/* ^ Фикс расстояния от имени до стрелки вниз и жирный текст */
+.TopNavBtn__profileName {
+    margin-right: 0 !important;
+    font-weight: bold  !important;
+}
+
+/* Размер шрифта в названии трека */
+.top_audio_player_title {
+    font-size: 13px !important;
+}
+
+/* Текст в поиске по центру */
+.TopSearch__input {
+    font-size: 15px !important;
+}
+
+/* ----- Боковое меню ----- */
+
+/* Скрытие 1-пиксельных серых линий */
+.more_div {
+    display: none !important;
+}
+
+/* Фикс меню под навигацией (Центрирование), выравнивание и скрытие границы */
+.left_menu_nav_wrap {
+    display: inline-flex !important;
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    padding: 0 !important;
+    border-top: none  !important;
+    margin: 0 !important;
+}
+
+/* ^ Фикс меню под навигацией (Центрирование), изменение отступа сверху от пунктов меню */
+[dir] #side_bar ol {
+    margin-bottom: 5px !important;
 }
 
 /* ----- Основная часть сайта ----- */
@@ -30,47 +63,26 @@ body {
 }
 
 /* Заглавные первые буквы в блоках (Друзья, онлайн статус) */
-.header_right_link:first-letter, .profile_online_lv:first-letter {
+#profile_friends > .header_right_link:first-letter, .profile_online_lv:first-letter {
     text-transform:  uppercase  !important;
 }
 
-/* Фикс ширини блока "Наверх" */
+/* Фикс ширини блока "Наверх" и позиция справа */
 #stl_left {
-    width: 0 !important;
+     width: 114px !important;
+     left: unset !important;
+     right: 0;
 }
 
-/* ^ Фикс ширини блока "Наверх" */
+/* ^ Фикс ширини блока "Наверх", скрытие кликабельного блока */
 #stl_side {
     display: none !important;
 }
 
-/* Фикс меню под навигацией (Центрирование) */
-.left_menu_nav_wrap {
-    border-top: none  !important;
-    padding: 0 !important;
-    text-align: center !important;
-}
+/* ----- Дополнительные фичи ----- */
 
-[dir] #side_bar ol {
-    margin-bottom: 5px !important;
-}
-
-[dir=ltr] .left_menu_nav {
-    padding: 0 5px  !important;
-}
-
-.ui_actions_menu {
-    text-align: left !important;
-}
-
-.more_div {
-    display: none !important;
-}
-
-/* ----- Дополнительные функции ----- */
-
-/* Скрытие рекламы */
-#ads_left, ._ads_block_data_w, .own_ads_promoted_post {
+/* Скрытие рекламы (Снизу бокового меню, рекламый пост в сообществах, рекламый пост в рекомендациях) */
+#ads_left, .own_ads_promoted_post, ._ads_block_data_w {
     display: none !important;
     visibility: hidden !important;
     position: absolute !important;
@@ -85,8 +97,8 @@ body {
     overflow: hidden !important;
 }
 
-/* Скрытие мини чата справа снизу */
-#chat_onl_wrap {
+/* Скрытие списка групп в подробной информации */
+#profile_full > div.profile_info_block.clear_fix:last-child > div.profile_info:last-child > div.clear_fix.profile_info_row:last-child {
     display: none !important;
 }
 
@@ -100,6 +112,37 @@ body {
 #side_bar {
     top: 0 !important;
     position: relative !important;
+}
+
+/*  Старая шапка */
+#page_header_cont {
+	background-color: #4a76a8 !important;
+    border-color: #4a76a8 !important;
+}
+
+.TopHomeLink {
+	background: url("data:image/svg+xml,%3Csvg height='19' viewBox='0 0 34 19' width='34' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m31.5584982 1.28655527c.2223912-.7416123.0000002-1.28655527-1.0584372-1.28655527h-3.5c-.8899347 0-1.3002074.47075088-1.5227219.98984863 0 0-1.7798696 4.33838569-4.3012897 7.15645072-.8157426.81574267-1.1865797 1.07529155-1.631547 1.07529155-.2224529 0-.5561938-.25954888-.5561938-1.00109946v-6.93393617c0-.88993476-.2465735-1.28655527-.9882476-1.28655527h-5.5c-.556132 0-.8905943.41303906-.8905943.80449184 0 .84364187 1.2606484 1.03819551 1.3905943 3.41135488v5.15412836c0 1.13002492-.2040763 1.33490212-.6490437 1.33490212-1.1865179 0-4.07272614-4.35776695-5.78451424-9.34419156-.33546923-.96918821-.67193969-1.36068564-1.56644202-1.36068564h-3.5c-1 0-1.20001221.47075088-1.20001221.98984863 0 .92703081 1.18657969 5.52496537 5.52490365 11.60606287 2.8921954 4.1529054 6.96710872 6.4040885 10.67510852 6.4040885 2.2247752 0 2.5-.5 2.5-1.3612483v-3.1387517c0-1 .2107621-1.1995723.9152784-1.1995723.5190977 0 1.4090325.2595489 3.4855469 2.2618712 2.3730977 2.3730977 2.7643343 3.4377011 4.0991747 3.4377011h3.5c1 0 1.5-.5 1.2115578-1.486722-.3156423-.9834253-1.4486683-2.4102444-2.9520878-4.1016239-.8158044-.9640651-2.0394184-2.0022606-2.4102555-2.5214818-.5190977-.6673585-.3707752-.96406514 0-1.55729326 0 0 4.2642554-6.00696708 4.7092227-8.04632377z' fill='%23fff' fill-rule='evenodd'/%3E%3C/svg%3E") center 0 no-repeat !important;
+	width: 34px !important;
+	height: 19px !important;
+    margin-right: 131px !important;
+}
+
+.TopHomeLink svg {
+	display: none !important;
+}
+
+.top_audio_player_title, .TopNavBtn__profileName, .top_nav_link, .TopNavBtn svg, .top_audio_player_btn svg {
+    color: #dae2ea !important;
+}
+
+/* Скрытие мини чата справа снизу */
+#chat_onl_wrap {
+    display: none !important;
+}
+
+/* Скрытие рекомендаций (Друзья, сообщества, возможно вы знакомы в рекомендациях, ,блок в разделе музыка) */
+#friends_possible_block, #groups_recommendations, .feed_friends_recomm, #feed_filters, .audio_promo, #react_rootRecentGroups {
+    display: none !important;
 }
 
 /* VK Pay переименование в левом меню (Размер текста 0) */
@@ -122,19 +165,4 @@ body {
 .olist_item_no_vkpay .olist_item_name:before {
     content: 'Кошелёк';
     font-size: 13px;
-}
-
-/* Скрытие списка групп в подробной информации */
-#profile_full > div.profile_info_block.clear_fix:last-child > div.profile_info:last-child > div.clear_fix.profile_info_row:last-child {
-    display: none !important;
-}
-
-/* Скрытие комментариев */
-.comment, .post_replies_header, .replies {
-    display: none !important;
-}
-
-/* Скрытие рекомендаций (друзья, сообщества) */
-#friends_possible_block, #groups_recommendations {
-    display: none !important;
 }
