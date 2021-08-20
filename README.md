@@ -28,4 +28,4 @@
 ***
 ### Скриншоты:
 ВКонтакте с фиксами
-![Img](/Screenshots/vk.jpg?raw=true "ВКонтакте с фиксами")
+![Img](/Screenshots/VK.jpg?raw=true "ВКонтакте с фиксами")
