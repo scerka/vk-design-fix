@@ -12,15 +12,14 @@ body {
 
 /* ----- Шапка ----- */
 
-/* Скрытие аватар справа */
-.TopNavBtn__profileImg {
+/* Скрытие аватар справа, кнопки с сервисами как у гугла, мессенджер, VK Pay/Combo */
+.TopNavBtn__profileImg, .TopNavBtn__ecosystemMenuLink, .TopNavBtn--messenger, #react_rootEcosystemAccountMenuEntry > div > div > div:nth-child(3)  {
     display: none !important;
 }
 
-/* ^ Фикс расстояния от имени до стрелки вниз и жирный текст */
-.TopNavBtn__profileName {
-    margin-right: 0 !important;
-    font-weight: bold  !important;
+/* ^ Фикс расстояния от имени до стрелки вниз */
+.TopNavBtn__profileLink {
+    padding-left: 0 !important;
 }
 
 /* Размер шрифта в названии трека */
@@ -136,7 +135,7 @@ body {
 }
 
 /* Скрытие мини чата справа снизу */
-#chat_onl_wrap {
+#fastchat-reforged {
     display: none !important;
 }
 
